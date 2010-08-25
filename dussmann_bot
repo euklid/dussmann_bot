@@ -1,0 +1,75 @@
+#!/bin/bash
+
+uid=$1 #User ID
+pw=$2  #Password
+cookie="" #SessionID-Cookie
+numweeks="" #number of available weeks
+startweek="" #start week
+declare -a weeks #weeks in an array
+declare -a monday
+declare -a tuesday
+declare -a wednesday	
+declare -a thurday
+declare -a friday
+declare -a saturday
+declare -a sunday	
+
+curl -c tempcook.txt --data "Login_Name=$uid&Login_Passwort=$pw" www.dussmann-lpf.rcs.de/index.php?a=akt_login #Log in and get SessionID
+cookie=$(cat tempcook.txt |grep PHPSESSID | cut -d"D" -f2| cut -f2) #extract SessionID
+curl "www.dussmann-lpf.rcs.de/index.php?PHPSESSID=$cookie&m=1;3" > menuplan.txt #save menu in file
+numweeks=$(cat menuplan.txt | grep -A6 "<select name=\"sel_woche\" class=\"no_print\" onchange=\"document.form_sel_woche.submit()\">"|  grep KW| cat -b| tail -n 1| cut -b 6) # get number of avialable weeks
+startweek=$(cat menuplan.txt | grep -A6 "<select name=\"sel_woche\" class=\"no_print\" onchange=\"document.form_sel_woche.submit()\">"|  grep KW|  head -n 1| cut -d":" -f2| cut -d" " -f2) #get start week
+for ((i=$startweek; i<$startweek+$numweeks; i++)); do
+{ # es ist scheiße, dass ich im index ständig rechnen muss. lieber
+	echo "Willst du in der $i . Woche bestellen? Nur y oder n !!!" # hier ändern
+	read weeks[$((i-startweek))]
+	if [ $( echo ${weeks[$((i-startweek))]} ) == "y" ];
+		then {	weeks[$((i-startweek))]=$i
+			echo "Alles bestellen?";
+			read weeks[$((i-startweek))];
+			if [ $(echo ${weeks[$((i-startweek))]} )  == "y" ];
+				then { weeks[$((i-startweek))]="y";
+				       monday[$((i-startweek))]="y";
+				       tuesday[$((i-startweek))]="y";
+				       wednesday[$((i-startweek))]="y";
+				       thursday[$((i-startweek))]="y";
+				       friday[$((i-startweek))]="y";
+				       saturday[$((i-startweek))]="y";
+				       sunday[$((i-startweek))]="y"; };  
+				else { echo "Montag?"
+				       read monday[$((i-startweek))]
+				       echo "Dienstag"?
+				       read tuesday[$((i-startweek))]
+				       echo "Mittwoch?"
+				       read wednesday[$((i-startweek))]
+				       echo "Donnerstag?"
+				       read thursday[$((i-startweek))]
+				       echo "Freitag?"
+				       read friday[$((i-startweek))]
+				       echo "Samstag?"
+			  	       read saturday[$((i-startweek))]
+				       echo "Sonntag?"
+				       read sunday[$((i-startweek))]	
+				      } ;
+			fi;
+		weeks[$((i-startweek))]=$i ;  
+		      }  ;
+		else weeks[$((i-startweek))]=0;
+	fi    
+};
+done
+
+for ((i=$startweek;i<$startweek+$numweeks; i++)); do
+{
+	if [ $( echo ${weeks[$((i-startweek))]} ) != "0" ];
+		then { weeks[$((i-startweek))]=$(cat menuplan.txt | grep -A6 "<select name=\"sel_woche\" class=\"no_print\" onchange=\"document.form_sel_woche.submit()\">"|  grep KW| cut -d"=" -f2-| grep "KW: ${weeks[$((i-startweek))]}" | cut -d"\"" -f2);    }; fi  #in this case the week's silly numbers are read
+};
+done
+
+for((i=$startweek; i<$startweek+$numweeks; i++));do
+{
+        echo ${weeks[$((i-startweek))]}
+};
+done
+
+
