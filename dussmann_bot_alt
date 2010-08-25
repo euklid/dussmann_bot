@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#penis 
+
 uid=$1 #User ID
 pw=$2  #Password
 cookie="" #SessionID-Cookie
