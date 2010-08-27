@@ -66,6 +66,17 @@ for ((i=$startweek;i<$startweek+$numweeks; i++)); do
 };
 done
 
+for((i=0; i<numweeks+1 ; i++)); do
+{
+	if [ $( echo ${weeks[$i]} ) ] != 0;
+	then {	curl --data "sel_woche=${weeks[$i]}" "www.dussmann-lpf.rcs.de/index.php?PHPSESSID=$cookie&m=1;3" > "$( echo "menu$(echo $i )" )" #creates a menu file for the menu in selected week
+		# add extraction of menu names
+		
+	};
+	fi
+};
+done
+
 for((i=$startweek; i<$startweek+$numweeks; i++));do
 {
         echo ${weeks[$((i-startweek))]}
