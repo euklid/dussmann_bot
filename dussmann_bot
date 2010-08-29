@@ -13,6 +13,9 @@ declare -a thurday
 declare -a friday
 declare -a saturday
 declare -a sunday	
+menu1=""
+menu2=""
+menu3=""
 
 curl -c tempcook.txt --data "Login_Name=$uid&Login_Passwort=$pw" www.dussmann-lpf.rcs.de/index.php?a=akt_login #Log in and get SessionID
 cookie=$(cat tempcook.txt |grep PHPSESSID | cut -d"D" -f2| cut -f2) #extract SessionID
@@ -69,8 +72,15 @@ done
 for((i=0; i<numweeks+1 ; i++)); do
 {
 	if [ $( echo ${weeks[$i]} ) ] != 0;
-	then {	curl --data "sel_woche=${weeks[$i]}" "www.dussmann-lpf.rcs.de/index.php?PHPSESSID=$cookie&m=1;3" > "$( echo "menu$(echo $i )" )" #creates a menu file for the menu in selected week
-		# add extraction of menu names
+	then {	curl --data "sel_woche=${weeks[$i]}" "www.dussmann-lpf.rcs.de/index.php?PHPSESSID=$cookie&m=1;3" > "$( echo "menu$(echo $i )" )" #creates a menu file for the menus in selected week
+		if [ $(echo ${monday[$i]} ) == "y" ];
+			then { menu1=$(cat "$( echo "menu$(echo $i )" )"| grep auflistung| grep _1_1| cut -d">" -f2-| cut -d">" -f2 | head -n1| cat -n | grep 1| cut -f3- )	
+			       menu2=$(cat "$( echo "menu$(echo $i )" )"| grep auflistung| grep _1_2| cut -d">" -f2-| cut -d">" -f2 | head -n1| cat -n | grep 1| cut -f3- )	
+			       menu3=$(cat "$( echo "menu$(echo $i )" )"| grep auflistung| grep _1_3| cut -d">" -f2-| cut -d">" -f2 | head -n1| cat -n | grep 1| cut -f3- )	}; fi #extraction of menu name
+				if []; # add comparison with favouritemenu file for each menu and then add with rating of food if menu not included in favouritemenu file
+					then {
+						};
+				fi
 		
 	};
 	fi
