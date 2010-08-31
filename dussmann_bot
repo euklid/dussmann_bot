@@ -62,7 +62,7 @@ done
 for ((i=$startweek;i<$startweek+$numweeks; i++)); do
 {
 	if [ $( echo ${weeks[$((i-startweek))]} ) != "0" ];
-		then { weeks[$((i-startweek))]=$(cat menuplan.txt | grep -A6 "<select name=\"sel_woche\" class=\"no_print\" onchange=\"document.form_sel_woche.submit()\">"|  grep KW| cut -d"=" -f2-| grep "KW: ${weeks[$((i-startweek))]}" | cut -d"\"" -f2);    }; fi  #in this case the week's silly numbers are read
+		then { weeks[$((i-startweek))]=$(cat menuplan.txt | grep -A100 "<select name=\"sel_woche\" class=\"no_print\" onchange=\"document.form_sel_woche.submit()\">"|  grep KW| cut -d"=" -f2-| grep "KW: ${weeks[$((i-startweek))]}" | cut -d"\"" -f2);    }; fi  #in this case the week's silly numbers are read
 };
 done
 
