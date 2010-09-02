@@ -77,8 +77,12 @@ for((i=0; i<numweeks+1 ; i++)); do
 			then { menu1=$(cat "$( echo "menu$(echo $i )" )"| grep auflistung| grep _1_1| cut -d">" -f2-| cut -d">" -f2 | head -n1| cat -n | grep 1| cut -f3- )	
 			       menu2=$(cat "$( echo "menu$(echo $i )" )"| grep auflistung| grep _1_2| cut -d">" -f2-| cut -d">" -f2 | head -n1| cat -n | grep 1| cut -f3- )	
 			       menu3=$(cat "$( echo "menu$(echo $i )" )"| grep auflistung| grep _1_3| cut -d">" -f2-| cut -d">" -f2 | head -n1| cat -n | grep 1| cut -f3- )	}; fi #extraction of menu name
-				if []; # add comparison with favouritemenu file for each menu and then add with rating of food if menu not included in favouritemenu file
-					then {
+				if [ $( cat favmenu| grep $( echo $menu1 ) == 0 ) ]; # add comparison with favouritemenu file for each menu and then add with rating of food if menu not included in favouritemenu file
+					then { menu1 = cat favmenu | grep $( echo $menu1 ) | cut -f1
+						};
+					else { echo "Wie bewertest du $( echo $menu1 ) ? rationale Skala von -2 bis 2."
+					       read menu1
+					       echo "$menu1 $" #think about a second menu var, one for food name, other for food rate	
 						};
 				fi
 		
