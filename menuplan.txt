@@ -44,19 +44,19 @@ document.write('<\/style>');
    </div>
   </div>
 <!-- Login-Bereich Ende -->  <div class="mBlock1">
-  <a class="mBlock1-link" href="index.php?PHPSESSID=afb74e90808f61625e3ee05b343fcf07&amp;m=0;0;1;0" title="AGBs">AGBs</a>
-  <a class="mBlock1-link" href="index.php?PHPSESSID=afb74e90808f61625e3ee05b343fcf07&amp;m=0;1;1;0" title="Kontakt">Kontakt</a>
-  <a class="mBlock1-link" href="index.php?PHPSESSID=afb74e90808f61625e3ee05b343fcf07&amp;m=0;2;1;0" title="Impressum">Impressum</a>
+  <a class="mBlock1-link" href="index.php?PHPSESSID=06e08e3f5a88090b08a0c3cc46796ae8&amp;m=0;0;1;0" title="AGBs">AGBs</a>
+  <a class="mBlock1-link" href="index.php?PHPSESSID=06e08e3f5a88090b08a0c3cc46796ae8&amp;m=0;1;1;0" title="Kontakt">Kontakt</a>
+  <a class="mBlock1-link" href="index.php?PHPSESSID=06e08e3f5a88090b08a0c3cc46796ae8&amp;m=0;2;1;0" title="Impressum">Impressum</a>
  </div>
  </div>
  <div id="schatten" class="no_print"></div>
  
  <div id="nav" class="no_print">
    <div class="mBlock2">
-  <a class="mBlock2-link" href="index.php?PHPSESSID=afb74e90808f61625e3ee05b343fcf07&amp;m=1;0" title="Allgemeine Informationen">Info</a>
-  <a class="mBlock2-link" href="index.php?PHPSESSID=afb74e90808f61625e3ee05b343fcf07&amp;m=1;2" title="Userinformationen verwalten">Meine Daten</a>
-  <a class="mBlock2-link" href="index.php?PHPSESSID=afb74e90808f61625e3ee05b343fcf07&amp;m=1;3" title="Einsicht in den Speiseplan">Speiseplan</a>
-  <a class="mBlock2-link" href="index.php?PHPSESSID=afb74e90808f61625e3ee05b343fcf07&amp;m=1;4" title="Einsicht in die aktuellen Menü-Bestellungen">Bestellübersicht</a>
+  <a class="mBlock2-link" href="index.php?PHPSESSID=06e08e3f5a88090b08a0c3cc46796ae8&amp;m=1;0" title="Allgemeine Informationen">Info</a>
+  <a class="mBlock2-link" href="index.php?PHPSESSID=06e08e3f5a88090b08a0c3cc46796ae8&amp;m=1;2" title="Userinformationen verwalten">Meine Daten</a>
+  <a class="mBlock2-link" href="index.php?PHPSESSID=06e08e3f5a88090b08a0c3cc46796ae8&amp;m=1;3" title="Einsicht in den Speiseplan">Speiseplan</a>
+  <a class="mBlock2-link" href="index.php?PHPSESSID=06e08e3f5a88090b08a0c3cc46796ae8&amp;m=1;4" title="Einsicht in die aktuellen Menü-Bestellungen">Bestellübersicht</a>
  </div>
   <div style="clear:both; line-height:1px; font-size:1px">&nbsp;</div>
  </div>
@@ -72,15 +72,18 @@ document.write('<\/style>');
 
 
 <h1>Speiseplan</h1>
-<form action="index.php?PHPSESSID=afb74e90808f61625e3ee05b343fcf07&amp;m=1;3#speiseplan_ank" method="post" name="form_sel_woche" style="margin:0px">
+<form action="index.php?PHPSESSID=06e08e3f5a88090b08a0c3cc46796ae8&amp;m=1;3#speiseplan_ank" method="post" name="form_sel_woche" style="margin:0px">
  <div style="float:left; clear:right; width:250px">
   <!-- START Dyn HTML-Select -->
   <select name="sel_woche" class="no_print" onchange="document.form_sel_woche.submit()">
-   <option value="1281909600">KW: 33 || 16.08.2010 - 22.08.2010</option>
-   <option value="1282514400" selected="selected">KW: 34 || 23.08.2010 - 29.08.2010</option>
-   <option value="1283119200">KW: 35 || 30.08.2010 - 05.09.2010</option>
+   <option value="1282514400">KW: 34 || 23.08.2010 - 29.08.2010</option>
+   <option value="1283119200" selected="selected">KW: 35 || 30.08.2010 - 05.09.2010</option>
    <option value="1283724000">KW: 36 || 06.09.2010 - 12.09.2010</option>
    <option value="1284328800">KW: 37 || 13.09.2010 - 19.09.2010</option>
+   <option value="1284933600">KW: 38 || 20.09.2010 - 26.09.2010</option>
+   <option value="1285538400">KW: 39 || 27.09.2010 - 03.10.2010</option>
+   <option value="1286143200">KW: 40 || 04.10.2010 - 10.10.2010</option>
+   <option value="1286748000">KW: 41 || 11.10.2010 - 17.10.2010</option>
   </select>
   <!-- ENDE Dyn HTML-Select -->
   <noscript>
@@ -91,10 +94,10 @@ document.write('<\/style>');
   <b>Bestellschluss:</b> 22:00 Uhr für einen Tag im Voraus </div>
 </form>
 <div style="padding-top:5px">
- <form name="speiseplan" method="post" action="index.php?PHPSESSID=afb74e90808f61625e3ee05b343fcf07&amp;m=150;0;1;3">
+ <form name="speiseplan" method="post" action="index.php?PHPSESSID=06e08e3f5a88090b08a0c3cc46796ae8&amp;m=150;0;1;3">
  <div style="text-align:right">
   <input type="hidden" name="m_alt" value="1;3" />
-  <input type="hidden" name="starttag" value="1282514400" />
+  <input type="hidden" name="starttag" value="1283119200" />
  </div>
  
  <!-- Start Tabelle -->
@@ -111,63 +114,62 @@ document.write('<\/style>');
   </tr>
   <tr  class="auflistung1" name="js_hidden">
    <td  class="head" style="vertical-align:top; padding-right:2px">&nbsp;</td>
-   <td  onClick="speiseplan.rad_1282514400_1[0].checked = true" class="pointer">&nbsp;</td>
-   <td  onClick="speiseplan.rad_1282600800_1[0].checked = true" class="pointer">&nbsp;</td>
-   <td  onClick="speiseplan.rad_1282687200_1[0].checked = true" class="pointer">&nbsp;</td>
-   <td  onClick="speiseplan.rad_1282773600_1[0].checked = true" class="pointer">&nbsp;</td>
-   <td  onClick="speiseplan.rad_1282860000_1[0].checked = true" class="pointer">&nbsp;</td>
-   <td  onClick="speiseplan.rad_1282946400_1[0].checked = true" class="pointer">&nbsp;</td>
-   <td  onClick="speiseplan.rad_1283032800_1[0].checked = true" class="pointer">&nbsp;</td>
+   <td  onClick="speiseplan.rad_1283119200_1[0].checked = true" class="pointer">&nbsp;</td>
+   <td  onClick="speiseplan.rad_1283205600_1[0].checked = true" class="pointer">&nbsp;</td>
+   <td  onClick="speiseplan.rad_1283292000_1[0].checked = true" class="pointer">&nbsp;</td>
+   <td  onClick="speiseplan.rad_1283378400_1[0].checked = true" class="pointer">&nbsp;</td>
+   <td  onClick="speiseplan.rad_1283464800_1[0].checked = true" class="pointer">&nbsp;</td>
+   <td  onClick="speiseplan.rad_1283551200_1[0].checked = true" class="pointer">&nbsp;</td>
+   <td  onClick="speiseplan.rad_1283637600_1[0].checked = true" class="pointer">&nbsp;</td>
   </tr>
   <tr >
    <td  class="head" style="vertical-align:top; padding-right:2px"><span class="menue_bez">Menü 1</span></td>
-   <td  class=" auflistung1">Zwiebelsteak mit Kroketten,dazu Salatbeilage
+   <td  class=" auflistung1">Königsberger Klopse mit Kapernsauce und Salzkartoffeln, dazu Salatbeilage
 <hr />
 &nbsp;
 </td>
-   <td  class=" auflistung0">Gekochtes Rindfleisch mit Meerrrettichsauce dazu Klöße Halb &amp; Halb
+   <td  class=" auflistung0">Paprikagulasch an Risi- Bisi, dazu Rohkost
 <hr />
 &nbsp;
 </td>
-   <td  class=" auflistung1">Salatteller mit Hähnchenbruststreifen
+   <td  class=" auflistung1">Forelle mit Dillsauce und Salzkartoffeln,dazu Salatbeilage
 <hr />
 &nbsp;
 </td>
-   <td  class=" auflistung0 gruen">Salamipizza, dazu Salatbeilage
-<hr />
-<input type="hidden" name="fld_1282773600_1_1" value="1" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
-1x bestellt&nbsp;
-</td>
-   <td  class=" auflistung1">Deftiger Linseneintopf mit Kartoffelstückchen und Blutwurst
+   <td  class=" auflistung0">Rinderroulade mit Apfelrotkohl,dazu  Petersilienkartoffeln
 <hr />
 &nbsp;
 </td>
-   <td  class=" auflistung0">
+   <td  class=" auflistung1">Kesselgulasch mit Kartoffelwürfel, dazu Brot
 <hr />
 &nbsp;
 </td>
-   <td  class=" auflistung1">
+   <td  class=" auflistung0">Currywurst an Kartoffelsalat,dazu Rohkost
+<hr />
+&nbsp;
+</td>
+   <td  class=" auflistung1">Burgunderbraten mit Rotweinjus,dazu Rosenkohl und Klöße Halb&amp;Halb
 <hr />
 &nbsp;
 </td>
   </tr>
   <tr >
    <td  class="head" style="vertical-align:top; padding-right:2px"><span class="menue_bez">Menü 2</span></td>
-   <td  class=" auflistung1 gruen">Rostbratwurst mit Sauerkraut und Kartoffelpüree
-<hr />
-<input type="hidden" name="fld_1282514400_1_2" value="1" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
-1x bestellt&nbsp;
-</td>
-   <td  class=" auflistung0 gruen">Cordon Bleu vom Schwein,dazu Buttererbsen und Petersilienkartoffeln
-<hr />
-<input type="hidden" name="fld_1282600800_1_2" value="1" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
-1x bestellt&nbsp;
-</td>
-   <td  class=" auflistung1">Spaghetti Bolognaise mit Reibekäse
+   <td  class=" auflistung1">Hähnchenspieß mit Currysauce und Risotto,dazu Salatbeilage
 <hr />
 &nbsp;
 </td>
-   <td  class=" auflistung0">Chicken Wings mit Paprikasauce und Risotto
+   <td  class=" auflistung0 gruen">Schweinekotelett mit grünen Bohnen und Petersilienkartoffeln
+<hr />
+<input type="hidden" name="fld_1283205600_1_2" value="1" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
+1x bestellt&nbsp;
+</td>
+   <td  class=" auflistung1 gruen">Putengeschnetzeltes in leichter Curry- Mandarinensauce an Reis,dazu Rohkost
+<hr />
+<input type="hidden" name="fld_1283292000_1_2" value="1" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
+1x bestellt&nbsp;
+</td>
+   <td  class=" auflistung0">Gebratene Jagdwurstscheibe mit Tomatensauce und Makkaroni,dazu Salatbeilage
 <hr />
 &nbsp;
 </td>
@@ -186,32 +188,33 @@ document.write('<\/style>');
   </tr>
   <tr >
    <td  class="head" style="vertical-align:top; padding-right:2px"><span class="menue_bez">Vegetarisch</span></td>
-   <td  class=" auflistung1">Kaiserschmarrn mit Vanillesauce
+   <td  class=" auflistung1 gruen">Kräuterquark mit Petersilienkartoffeln
 <hr />
-&nbsp;
-</td>
-   <td  class=" auflistung0">Gefüllte Tomate mit pikanter Sauce an Risotto
-<hr />
-&nbsp;
-</td>
-   <td  class=" auflistung1 gruen">Rührei mit Spinat und Salzkartoffeln
-<hr />
-<input type="hidden" name="fld_1282687200_1_3" value="1" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
+<input type="hidden" name="fld_1283119200_1_3" value="1" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
 1x bestellt&nbsp;
 </td>
-   <td  class=" auflistung0">Gekochte Eier an Senfsauce mit Kartoffeln
+   <td  class=" auflistung0">Pilzpfanne mit Spätzle
 <hr />
 &nbsp;
 </td>
-   <td  class=" auflistung1">Grießbrei mit Fruchtsauce
+   <td  class=" auflistung1">Sallatteller DUSSMANN, dazu Baguette
 <hr />
 &nbsp;
 </td>
-   <td  class=" auflistung0">
+   <td  class=" auflistung0 gruen">Kartoffeltaschen mit pikanter sauce,dazu Salatbeilage
+<hr />
+<input type="hidden" name="fld_1283378400_1_3" value="1" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
+1x bestellt&nbsp;
+</td>
+   <td  class=" auflistung1">Folienkartoffeln mit Tzatziki, dazu Salatbeilage
 <hr />
 &nbsp;
 </td>
-   <td  class=" auflistung1">
+   <td  class=" auflistung0">Kartoffelpuffer mit Zucker
+<hr />
+&nbsp;
+</td>
+   <td  class=" auflistung1">Gemüserolle mit Petersilienkartoffeln
 <hr />
 &nbsp;
 </td>
@@ -220,33 +223,33 @@ document.write('<\/style>');
    <td  class="head" style="vertical-align:top; padding-right:2px"><span class="menue_bez">Dessert</span></td>
    <td  class=" auflistung1 gruen">Quarkspeise
 <hr />
-<input type="hidden" name="fld_1282514400_1_4" value="1" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
+<input type="hidden" name="fld_1283119200_1_4" value="1" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
 1x bestellt&nbsp;
 </td>
    <td  class=" auflistung0 gruen">Frisches Obst
 <hr />
-<input type="hidden" name="fld_1282600800_1_4" value="1" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
+<input type="hidden" name="fld_1283205600_1_4" value="1" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
 1x bestellt&nbsp;
 </td>
-   <td  class=" auflistung1 gruen">kompott
+   <td  class=" auflistung1 gruen">Kompott
 <hr />
-<input type="hidden" name="fld_1282687200_1_4" value="1" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
+<input type="hidden" name="fld_1283292000_1_4" value="1" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
 1x bestellt&nbsp;
 </td>
-   <td  class=" auflistung0 gruen">Pudding
+   <td  class=" auflistung0 gruen">Cremespeise
 <hr />
-<input type="hidden" name="fld_1282773600_1_4" value="1" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
+<input type="hidden" name="fld_1283378400_1_4" value="1" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
 1x bestellt&nbsp;
 </td>
    <td  class=" auflistung1">Joghurt
 <hr />
 &nbsp;
 </td>
-   <td  class=" auflistung0">
+   <td  class=" auflistung0">Apfelmus
 <hr />
 &nbsp;
 </td>
-   <td  class=" auflistung1">
+   <td  class=" auflistung1">Frisches Obst
 <hr />
 &nbsp;
 </td>
