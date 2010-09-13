@@ -85,26 +85,26 @@ do
 	fi    
 done
 
-for ((i=$startweek;i<$startweek+$numweeks; i++)) 
+for ((i=0;i<$numweeks; i++)) 
 do	
-	if [ $( echo ${weeks[$((i-startweek))]} ) != "0" ]
+	if [ $( echo ${weeks[$i]} ) != 0 ]
 	then	#here the week's silly numbers are read
-		weeks[$((i-startweek))]=$(cat menuplan.txt | 
-				       grep -A100 "<select name=\"sel_woche\" class=\"no_print\" onchange=\"document.form_sel_woche.submit()\">"|
-				       grep KW| cut -d"=" -f2-| 
-				       grep "KW: ${weeks[$((i-startweek))]}" | 
-				       cut -d"\"" -f2)     
+		weeks[$i]=$(cat menuplan.txt | 
+			 grep -A100 "<select name=\"sel_woche\" class=\"no_print\" onchange=\"document.form_sel_woche.submit()\">"|
+			 grep KW| cut -d"=" -f2- | 
+			 grep "KW: ${weeks[$i]}" | 
+			 cut -d"\"" -f2)     
 	fi  
 done
 
 for ((i=0; i<numweeks ; i++))
 do	
-	if [ $(echo "${weeks[$i]}")  != "0" ]
+	if [ ${weeks[$i]}  != "0" ]
 	then 	#creates a menu file for the menus in selected week
 		curl --data "sel_woche=${weeks[$i]}" "www.dussmann-lpf.rcs.de/index.php?PHPSESSID=$cookie&m=1;3" > "menu$i" 
 	
-		if [ ${monday[$i]} == "y" ]
-		then 		
+		if [ ${monday[$i]} == y ] #this sucking day problem will be solved with 2-dimensional array in c, this solution is bloody fucking shit
+		then 	#extraction of menu name	
 			menu1[1]=$(cat "$( echo "menu$(echo $i )" )"|
 		       		grep auflistung| 
 		        	grep _1_1| 
@@ -129,30 +129,89 @@ do
 		       		grep _1_3| 
 		       		cut -d">" -f2-| 
 		       		cut -d">" -f2 | 
-		       		head -n1| 
+		       		head -n1 |        
 		       		cat -n | 
 		       		grep 1| 
 		       		cut -f2- )	
+				# should the head -n1 disappear?? yes it can.
+
+			 # comparison with favouritemenu file for each menu and then rating of food if menu not included in favouritemenu file
+
+			if  cat favmenu | grep "$( echo "${menu1[1]}" )"
+                	then #rating for menu1
+                        	menu1[2]=$(cat favmenu | 
+                                	grep "$( echo ${menu1[1]} )" | 
+                                	cut -d" " -f1 )
+                			#added delimiter and it works
+                			# echo " bla ${menu1[2]}"
+
+                	else
+                        	echo "Wie bewertest du $( echo ${menu1[1]} ) ? rationale Skala von -2 bis 2."
+                        	read menu1[2]
+                        	# echo ${menu1[1]} #added this here for testing
+                        	# echo ${menu1[2]} #the same
+                        	echo "${menu1[2]} ${menu1[1]}" >> favmenu
+                	fi
+				
+			if  cat favmenu | grep "$( echo "${menu2[1]}" )"
+                        then #rating for menu2
+                                menu2[2]=$(cat favmenu | 
+                                        grep "$( echo ${menu2[1]} )" | 
+                                        cut -d" " -f1 )
+                                        #added delimiter and it works
+                                        # echo " bla ${menu1[2]}"
+
+                        else
+                                echo "Wie bewertest du $( echo ${menu2[1]} ) ? rationale Skala von -2 bis 2."
+                                read menu2[2]
+                                # echo ${menu2[1]} #added this here for testing
+                                # echo ${menu2[2]} #the same
+                                echo "${menu2[2]} ${menu2[1]}" >> favmenu
+                        fi
+
+			if  cat favmenu | grep "$( echo "${menu3[1]}" )"
+                        then #rating for menu3
+                                menu3[2]=$(cat favmenu | 
+                                        grep "$( echo ${menu3[1]} )" | 
+                                        cut -d" " -f1 )
+                                        #added delimiter and it works
+                                        # echo " bla ${menu3[2]}"
+
+                        else
+                                echo "Wie bewertest du $( echo ${menu3[1]} ) ? rationale Skala von -2 bis 2."
+                                read menu3[2]
+                                # echo ${menu3[1]} #added this here for testing
+                                # echo ${menu3[2]} #the same
+                                echo "${menu3[2]} ${menu3[1]}" >> favmenu
+                        fi
+			
+			# create compare file so that we can find the highest rated menu
+                        echo "${menu1[2]} ${menu1[1]}"} >> compare
+			echo "${menu2[2]} ${menu2[1]}"} >> compare
+			echo "${menu2[2]} ${menu2[1]}"} >> compare
+			#store best food for monday in the i-th week	
+			monday[$i]=$(sort -g -r compare| head -n1| cut -d" " -f2- )   
+			# store silly name of this food for ordering
+                	monday[$i]=$(cat "menu$i"| grep "$(echo ${monday[$i]})"| cut -d" " -f8| cut -d"=" -f2)          
  		fi
-		 #extraction of menu name
 		
-		if  cat favmenu | grep "$( echo "${menu1[1]}" )" 
+#		if  cat favmenu | grep "$( echo "${menu1[1]}" )" 
 		# comparison with favouritemenu file for each menu and then rating of food if menu not included in favouritemenu file
-		then 	
-			menu1[2]=$(cat favmenu | 
-				grep "$( echo ${menu1[1]} )" | 
-				cut -d" " -f1 ) 
-		#added delimiter and it works
-		# echo " bla ${menu1[2]}"
-
-		else 	
-			echo "Wie bewertest du $( echo ${menu1[1]} ) ? rationale Skala von -2 bis 2."
-		       	read menu1[2]
-		      	# echo ${menu1[1]} #added this here for testing
-		      	# echo ${menu1[2]} #the same
-		       	echo "${menu1[2]} ${menu1[1]}" >> favmenu 
-		fi
-
+#		then 	
+#			menu1[2]=$(cat favmenu | 
+#				grep "$( echo ${menu1[1]} )" | 
+#				cut -d" " -f1 ) 
+#		#added delimiter and it works
+#		# echo " bla ${menu1[2]}"
+#
+#		else 	
+#			echo "Wie bewertest du $( echo ${menu1[1]} ) ? rationale Skala von -2 bis 2."
+#		       	read menu1[2]
+#		      	# echo ${menu1[1]} #added this here for testing
+#		      	# echo ${menu1[2]} #the same
+#		       	echo "${menu1[2]} ${menu1[1]}" >> favmenu 
+#		fi
+#
 	fi
 	
 # echo "${weeks[$i]}" # just checking
