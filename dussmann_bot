@@ -186,7 +186,7 @@ do
                         fi
 			
 			# create compare file so that we can find the highest rated menu
-                        echo "${menu1[2]} ${menu1[1]}"} >> compare
+                        echo "${menu1[2]} ${menu1[1]}"} > compare
 			echo "${menu2[2]} ${menu2[1]}"} >> compare
 			echo "${menu2[2]} ${menu2[1]}"} >> compare
 			#store best food for monday in the i-th week	
