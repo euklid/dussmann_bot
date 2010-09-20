@@ -44,19 +44,19 @@ document.write('<\/style>');
    </div>
   </div>
 <!-- Login-Bereich Ende -->  <div class="mBlock1">
-  <a class="mBlock1-link" href="index.php?PHPSESSID=7995e0e98046311891bbd2197ea93115&amp;m=0;0;1;0" title="AGBs">AGBs</a>
-  <a class="mBlock1-link" href="index.php?PHPSESSID=7995e0e98046311891bbd2197ea93115&amp;m=0;1;1;0" title="Kontakt">Kontakt</a>
-  <a class="mBlock1-link" href="index.php?PHPSESSID=7995e0e98046311891bbd2197ea93115&amp;m=0;2;1;0" title="Impressum">Impressum</a>
+  <a class="mBlock1-link" href="index.php?PHPSESSID=4278a7edcabfba95a9fcd87650d5ecea&amp;m=0;0;1;0" title="AGBs">AGBs</a>
+  <a class="mBlock1-link" href="index.php?PHPSESSID=4278a7edcabfba95a9fcd87650d5ecea&amp;m=0;1;1;0" title="Kontakt">Kontakt</a>
+  <a class="mBlock1-link" href="index.php?PHPSESSID=4278a7edcabfba95a9fcd87650d5ecea&amp;m=0;2;1;0" title="Impressum">Impressum</a>
  </div>
  </div>
  <div id="schatten" class="no_print"></div>
  
  <div id="nav" class="no_print">
    <div class="mBlock2">
-  <a class="mBlock2-link" href="index.php?PHPSESSID=7995e0e98046311891bbd2197ea93115&amp;m=1;0" title="Allgemeine Informationen">Info</a>
-  <a class="mBlock2-link" href="index.php?PHPSESSID=7995e0e98046311891bbd2197ea93115&amp;m=1;2" title="Userinformationen verwalten">Meine Daten</a>
-  <a class="mBlock2-link" href="index.php?PHPSESSID=7995e0e98046311891bbd2197ea93115&amp;m=1;3" title="Einsicht in den Speiseplan">Speiseplan</a>
-  <a class="mBlock2-link" href="index.php?PHPSESSID=7995e0e98046311891bbd2197ea93115&amp;m=1;4" title="Einsicht in die aktuellen Menü-Bestellungen">Bestellübersicht</a>
+  <a class="mBlock2-link" href="index.php?PHPSESSID=4278a7edcabfba95a9fcd87650d5ecea&amp;m=1;0" title="Allgemeine Informationen">Info</a>
+  <a class="mBlock2-link" href="index.php?PHPSESSID=4278a7edcabfba95a9fcd87650d5ecea&amp;m=1;2" title="Userinformationen verwalten">Meine Daten</a>
+  <a class="mBlock2-link" href="index.php?PHPSESSID=4278a7edcabfba95a9fcd87650d5ecea&amp;m=1;3" title="Einsicht in den Speiseplan">Speiseplan</a>
+  <a class="mBlock2-link" href="index.php?PHPSESSID=4278a7edcabfba95a9fcd87650d5ecea&amp;m=1;4" title="Einsicht in die aktuellen Menü-Bestellungen">Bestellübersicht</a>
  </div>
   <div style="clear:both; line-height:1px; font-size:1px">&nbsp;</div>
  </div>
@@ -72,7 +72,7 @@ document.write('<\/style>');
 
 
 <h1>Speiseplan</h1>
-<form action="index.php?PHPSESSID=7995e0e98046311891bbd2197ea93115&amp;m=1;3#speiseplan_ank" method="post" name="form_sel_woche" style="margin:0px">
+<form action="index.php?PHPSESSID=4278a7edcabfba95a9fcd87650d5ecea&amp;m=1;3#speiseplan_ank" method="post" name="form_sel_woche" style="margin:0px">
  <div style="float:left; clear:right; width:250px">
   <!-- START Dyn HTML-Select -->
   <select name="sel_woche" class="no_print" onchange="document.form_sel_woche.submit()">
@@ -92,12 +92,11 @@ document.write('<\/style>');
   <b>Bestellschluss:</b> 22:00 Uhr für 4 Tag(e) im Voraus </div>
 </form>
 <div style="padding-top:5px">
- <form name="speiseplan" method="post" action="index.php?PHPSESSID=7995e0e98046311891bbd2197ea93115&amp;m=150;0;1;3">
+ <form name="speiseplan" method="post" action="index.php?PHPSESSID=4278a7edcabfba95a9fcd87650d5ecea&amp;m=150;0;1;3">
  <div style="text-align:right">
   <input type="hidden" name="m_alt" value="1;3" />
   <input type="hidden" name="starttag" value="1284328800" />
  </div>
-  <div style="text-align:right; position:relative; top:-25px; height:1px"><input type="reset" /><input type="submit" value="Weiter" style="font-weight:bold; width:100px" /></div>
  
  <!-- Start Tabelle -->
  <table class="splanauflistung"  summary="Speiseplan">
@@ -117,9 +116,9 @@ document.write('<\/style>');
    <td  onClick="speiseplan.rad_1284415200_1[0].checked = true" class="pointer">&nbsp;</td>
    <td  onClick="speiseplan.rad_1284501600_1[0].checked = true" class="pointer">&nbsp;</td>
    <td  onClick="speiseplan.rad_1284588000_1[0].checked = true" class="pointer">&nbsp;</td>
-   <td  onClick="speiseplan.rad_1284674400_1[0].checked = true" class="pointer"><input type="radio" name="rad_1284674400_1" value="del1"/> Menü entfernen</td>
-   <td  onClick="speiseplan.rad_1284760800_1[0].checked = true" class="pointer"><input type="radio" name="rad_1284760800_1" value="del1"/> Menü entfernen</td>
-   <td  onClick="speiseplan.rad_1284847200_1[0].checked = true" class="pointer"><input type="radio" name="rad_1284847200_1" value="del1"/> Menü entfernen</td>
+   <td  onClick="speiseplan.rad_1284674400_1[0].checked = true" class="pointer">&nbsp;</td>
+   <td  onClick="speiseplan.rad_1284760800_1[0].checked = true" class="pointer">&nbsp;</td>
+   <td  onClick="speiseplan.rad_1284847200_1[0].checked = true" class="pointer">&nbsp;</td>
   </tr>
   <tr >
    <td  class="head" style="vertical-align:top; padding-right:2px"><span class="menue_bez">Menü 1</span></td>
@@ -139,17 +138,18 @@ document.write('<\/style>');
 <hr />
 &nbsp;
 </td>
-   <td  onClick="check('rad_1284674400_1', '1');" name="td_1284674400_1_1" class=" auflistung1 gruen pointer">Soljanka mit Brot
+   <td  class=" auflistung1 gruen">Soljanka mit Brot
 <hr />
-<input type="radio" name="rad_1284674400_1" value="1_1_1" class="bestellt" checked="checked" /><script type="text/javascript">document.write('<div class="input_overlay">&nbsp;</div>');</script>
+<input type="hidden" name="fld_1284674400_1_1" value="1" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
+1x bestellt&nbsp;
 </td>
-   <td  onClick="check('rad_1284760800_1', '1');" name="td_1284760800_1_1" class=" auflistung0 pointer">deftiger Linseneintopf mit Blutwurst
+   <td  class=" auflistung0">deftiger Linseneintopf mit Blutwurst
 <hr />
-<input type="radio" name="rad_1284760800_1" value="1_1_1" class="splan_input" /><script type="text/javascript">document.write('<div class="input_overlay">&nbsp;</div>');</script>
+&nbsp;
 </td>
-   <td  onClick="check('rad_1284847200_1', '1');" name="td_1284847200_1_1" class=" auflistung1 pointer">Gefüllter Putenrollbraten mit Pariser Möhren und Petersilienkartoffeln
+   <td  class=" auflistung1">Gefüllter Putenrollbraten mit Pariser Möhren und Petersilienkartoffeln
 <hr />
-<input type="radio" name="rad_1284847200_1" value="1_1_1" class="splan_input" /><script type="text/javascript">document.write('<div class="input_overlay">&nbsp;</div>');</script>
+&nbsp;
 </td>
   </tr>
   <tr >
@@ -172,17 +172,17 @@ document.write('<\/style>');
 <hr />
 &nbsp;
 </td>
-   <td  onClick="check('rad_1284674400_1', '2');" name="td_1284674400_1_2" class=" auflistung1 pointer">
+   <td  class=" auflistung1">
 <hr />
-<input type="hidden" name="fld_1284674400_1_2" value="0" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
+&nbsp;
 </td>
-   <td  onClick="check('rad_1284760800_1', '2');" name="td_1284760800_1_2" class=" auflistung0 pointer">
+   <td  class=" auflistung0">
 <hr />
-<input type="hidden" name="fld_1284760800_1_2" value="0" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
+&nbsp;
 </td>
-   <td  onClick="check('rad_1284847200_1', '2');" name="td_1284847200_1_2" class=" auflistung1 pointer">
+   <td  class=" auflistung1">
 <hr />
-<input type="hidden" name="fld_1284847200_1_2" value="0" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
+&nbsp;
 </td>
   </tr>
   <tr >
@@ -205,17 +205,17 @@ document.write('<\/style>');
 <input type="hidden" name="fld_1284588000_1_3" value="1" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
 1x bestellt&nbsp;
 </td>
-   <td  onClick="check('rad_1284674400_1', '2');" name="td_1284674400_1_2" class=" auflistung1 pointer">Frühlingsrolle mit pikanter sauce
+   <td  class=" auflistung1">Frühlingsrolle mit pikanter sauce
 <hr />
-<input type="radio" name="rad_1284674400_1" value="1_1_3" class="splan_input" /><script type="text/javascript">document.write('<div class="input_overlay">&nbsp;</div>');</script>
+&nbsp;
 </td>
-   <td  onClick="check('rad_1284760800_1', '2');" name="td_1284760800_1_2" class=" auflistung0 pointer">Milchreis mit Kirschsauce
+   <td  class=" auflistung0">Milchreis mit Kirschsauce
 <hr />
-<input type="radio" name="rad_1284760800_1" value="1_1_3" class="splan_input" /><script type="text/javascript">document.write('<div class="input_overlay">&nbsp;</div>');</script>
+&nbsp;
 </td>
-   <td  onClick="check('rad_1284847200_1', '2');" name="td_1284847200_1_2" class=" auflistung1 pointer">Gemüseschnitzel mit Kräutersauce und Petersilienkartoffeln
+   <td  class=" auflistung1">Gemüseschnitzel mit Kräutersauce und Petersilienkartoffeln
 <hr />
-<input type="radio" name="rad_1284847200_1" value="1_1_3" class="splan_input" /><script type="text/javascript">document.write('<div class="input_overlay">&nbsp;</div>');</script>
+&nbsp;
 </td>
   </tr>
   <tr >
@@ -237,23 +237,22 @@ document.write('<\/style>');
 <hr />
 &nbsp;
 </td>
-   <td  onClick="check('fld_1284674400_1_4', 1)" class=" auflistung1 pointer">Joghurt
+   <td  class=" auflistung1">Joghurt
 <hr />
-<input type="hidden" name="fld_1284674400_1_4" value="0" class="splan_input" /><input type="checkbox" name="fld_1284674400_1_4" value="1" class="splan_input"  /><script type="text/javascript">document.write('<div class="input_overlay">&nbsp;</div>');</script>
+&nbsp;
 </td>
-   <td  onClick="check('fld_1284760800_1_4', 1)" class=" auflistung0 pointer">frisches Obst
+   <td  class=" auflistung0">frisches Obst
 <hr />
-<input type="hidden" name="fld_1284760800_1_4" value="0" class="splan_input" /><input type="checkbox" name="fld_1284760800_1_4" value="1" class="splan_input"  /><script type="text/javascript">document.write('<div class="input_overlay">&nbsp;</div>');</script>
+&nbsp;
 </td>
-   <td  onClick="check('fld_1284847200_1_4', 1)" class=" auflistung1 pointer">Kompott
+   <td  class=" auflistung1">Kompott
 <hr />
-<input type="hidden" name="fld_1284847200_1_4" value="0" class="splan_input" /><input type="checkbox" name="fld_1284847200_1_4" value="1" class="splan_input"  /><script type="text/javascript">document.write('<div class="input_overlay">&nbsp;</div>');</script>
+&nbsp;
 </td>
   </tr>
  </table>
  <!-- Ende Tabelle -->
 
-  <div style="text-align:right"><input type="reset" /><input type="submit" value="Weiter" style="font-weight:bold; width:100px" /></div>
   </form>
  
  
