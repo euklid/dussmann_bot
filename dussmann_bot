@@ -28,7 +28,7 @@ curl "www.dussmann-lpf.rcs.de/index.php?PHPSESSID=$cookie&m=1;3" > menuplan.txt
 
 # get number of avialable weeks
 numweeks=$(cat menuplan.txt | 
-	grep -A100 "<select name=\"sel_woche\" class=\"no_print\" onchange=\"document.form_sel_woche.submit()\">"|
+	grep -A100 "<select name=\"sel_datum\" class=\"no_print\" onchange=\"document.form_sel_datum.submit()\">"|
 	grep KW| 
 	cat -b| 
 	tail -n 1| 
@@ -36,7 +36,7 @@ numweeks=$(cat menuplan.txt |
 
 #get start week
 startweek=$(cat menuplan.txt | 
-	 grep -A100 "<select name=\"sel_woche\" class=\"no_print\" onchange=\"document.form_sel_woche.submit()\">"| 
+	 grep -A100 "<select name=\"sel_datum\" class=\"no_print\" onchange=\"document.form_sel_datum.submit()\">"| 
 	 grep KW| 
 	 head -n 1| 
 	 cut -d":" -f2| 
@@ -90,7 +90,7 @@ do
 	if [ $( echo ${weeks[$i]} ) != 0 ]
 	then	#here the week's silly numbers are read
 		weeks[$i]=$(cat menuplan.txt | 
-			 grep -A100 "<select name=\"sel_woche\" class=\"no_print\" onchange=\"document.form_sel_woche.submit()\">"|
+			 grep -A100 "<select name=\"sel_datum\" class=\"no_print\" onchange=\"document.form_sel_datum.submit()\">"|
 			 grep KW| cut -d"=" -f2- | 
 			 grep "KW: ${weeks[$i]}" | 
 			 cut -d"\"" -f2)     
