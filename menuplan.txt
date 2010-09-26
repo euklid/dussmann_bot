@@ -26,7 +26,10 @@ document.write('<\/style>');
 //-->
 </script>
  </head>
-  <body onload="js_hidden()">
+ <body onload="js_hidden()">
+
+    <!-- start Browser Check-->
+        <!-- ende Browser Check-->
 
 <!-- start HTML-Body -->
 <div id="site">
@@ -44,19 +47,19 @@ document.write('<\/style>');
    </div>
   </div>
 <!-- Login-Bereich Ende -->  <div class="mBlock1">
-  <a class="mBlock1-link" href="index.php?PHPSESSID=4278a7edcabfba95a9fcd87650d5ecea&amp;m=0;0;1;0" title="AGBs">AGBs</a>
-  <a class="mBlock1-link" href="index.php?PHPSESSID=4278a7edcabfba95a9fcd87650d5ecea&amp;m=0;1;1;0" title="Kontakt">Kontakt</a>
-  <a class="mBlock1-link" href="index.php?PHPSESSID=4278a7edcabfba95a9fcd87650d5ecea&amp;m=0;2;1;0" title="Impressum">Impressum</a>
+  <a class="mBlock1-link" href="index.php?PHPSESSID=0361e92c20b282b7def185d7d233b034&amp;m=0;0;1;0" title="AGBs">AGBs</a>
+  <a class="mBlock1-link" href="index.php?PHPSESSID=0361e92c20b282b7def185d7d233b034&amp;m=0;1;1;0" title="Kontakt">Kontakt</a>
+  <a class="mBlock1-link" href="index.php?PHPSESSID=0361e92c20b282b7def185d7d233b034&amp;m=0;2;1;0" title="Impressum">Impressum</a>
  </div>
  </div>
  <div id="schatten" class="no_print"></div>
  
  <div id="nav" class="no_print">
    <div class="mBlock2">
-  <a class="mBlock2-link" href="index.php?PHPSESSID=4278a7edcabfba95a9fcd87650d5ecea&amp;m=1;0" title="Allgemeine Informationen">Info</a>
-  <a class="mBlock2-link" href="index.php?PHPSESSID=4278a7edcabfba95a9fcd87650d5ecea&amp;m=1;2" title="Userinformationen verwalten">Meine Daten</a>
-  <a class="mBlock2-link" href="index.php?PHPSESSID=4278a7edcabfba95a9fcd87650d5ecea&amp;m=1;3" title="Einsicht in den Speiseplan">Speiseplan</a>
-  <a class="mBlock2-link" href="index.php?PHPSESSID=4278a7edcabfba95a9fcd87650d5ecea&amp;m=1;4" title="Einsicht in die aktuellen Menü-Bestellungen">Bestellübersicht</a>
+  <a class="mBlock2-link" href="index.php?PHPSESSID=0361e92c20b282b7def185d7d233b034&amp;m=1;0" title="Allgemeine Informationen">Info</a>
+  <a class="mBlock2-link" href="index.php?PHPSESSID=0361e92c20b282b7def185d7d233b034&amp;m=1;2" title="Userinformationen verwalten">Meine Daten</a>
+  <a class="mBlock2-link" href="index.php?PHPSESSID=0361e92c20b282b7def185d7d233b034&amp;m=1;3" title="Einsicht in den Speiseplan">Speiseplan</a>
+  <a class="mBlock2-link" href="index.php?PHPSESSID=0361e92c20b282b7def185d7d233b034&amp;m=1;4" title="Einsicht in die aktuellen Menü-Bestellungen">Bestellübersicht</a>
  </div>
   <div style="clear:both; line-height:1px; font-size:1px">&nbsp;</div>
  </div>
@@ -72,14 +75,13 @@ document.write('<\/style>');
 
 
 <h1>Speiseplan</h1>
-<form action="index.php?PHPSESSID=4278a7edcabfba95a9fcd87650d5ecea&amp;m=1;3#speiseplan_ank" method="post" name="form_sel_woche" style="margin:0px">
+<form action="index.php?PHPSESSID=0361e92c20b282b7def185d7d233b034&amp;m=1;3#speiseplan_ank" method="post" name="form_sel_datum" style="margin:0px">
  <div style="float:left; clear:right; width:250px">
   <!-- START Dyn HTML-Select -->
-  <select name="sel_woche" class="no_print" onchange="document.form_sel_woche.submit()">
-   <option value="1283724000">KW: 36 || 06.09.2010 - 12.09.2010</option>
-   <option value="1284328800" selected="selected">KW: 37 || 13.09.2010 - 19.09.2010</option>
+  <select name="sel_datum" class="no_print" onchange="document.form_sel_datum.submit()">
+   <option value="1284328800">KW: 37 || 13.09.2010 - 19.09.2010</option>
    <option value="1284933600">KW: 38 || 20.09.2010 - 26.09.2010</option>
-   <option value="1285538400">KW: 39 || 27.09.2010 - 03.10.2010</option>
+   <option value="1285538400" selected="selected">KW: 39 || 27.09.2010 - 03.10.2010</option>
    <option value="1286143200">KW: 40 || 04.10.2010 - 10.10.2010</option>
    <option value="1286748000">KW: 41 || 11.10.2010 - 17.10.2010</option>
   </select>
@@ -92,11 +94,13 @@ document.write('<\/style>');
   <b>Bestellschluss:</b> 22:00 Uhr für 4 Tag(e) im Voraus </div>
 </form>
 <div style="padding-top:5px">
- <form name="speiseplan" method="post" action="index.php?PHPSESSID=4278a7edcabfba95a9fcd87650d5ecea&amp;m=150;0;1;3">
+ <form name="speiseplan" method="post" action="index.php?PHPSESSID=0361e92c20b282b7def185d7d233b034&amp;m=150;0;1;3">
  <div style="text-align:right">
   <input type="hidden" name="m_alt" value="1;3" />
-  <input type="hidden" name="starttag" value="1284328800" />
+  <input type="hidden" name="starttag" value="1285538400" />
+  <input type="hidden" name="endtag" value="1286143200" />
  </div>
+  <div style="text-align:right; position:relative; top:-25px; height:1px"><input type="reset" /><input type="submit" value="Weiter" style="font-weight:bold; width:100px" /></div>
  
  <!-- Start Tabelle -->
  <table class="splanauflistung"  summary="Speiseplan">
@@ -107,152 +111,150 @@ document.write('<\/style>');
    <th>Mittwoch</th>
    <th>Donnerstag</th>
    <th>Freitag</th>
-   <th>Sa</th>
-   <th>So</th>
+   <th>Samstag</th>
+   <th>Sonntag</th>
   </tr>
   <tr  class="auflistung1" name="js_hidden">
    <td  class="head" style="vertical-align:top; padding-right:2px">&nbsp;</td>
-   <td  onClick="speiseplan.rad_1284328800_1[0].checked = true" class="pointer">&nbsp;</td>
-   <td  onClick="speiseplan.rad_1284415200_1[0].checked = true" class="pointer">&nbsp;</td>
-   <td  onClick="speiseplan.rad_1284501600_1[0].checked = true" class="pointer">&nbsp;</td>
-   <td  onClick="speiseplan.rad_1284588000_1[0].checked = true" class="pointer">&nbsp;</td>
-   <td  onClick="speiseplan.rad_1284674400_1[0].checked = true" class="pointer">&nbsp;</td>
-   <td  onClick="speiseplan.rad_1284760800_1[0].checked = true" class="pointer">&nbsp;</td>
-   <td  onClick="speiseplan.rad_1284847200_1[0].checked = true" class="pointer">&nbsp;</td>
+   <td  onClick="speiseplan.rad_1285538400_1[0].checked = true" class="pointer" name="js_hidden">&nbsp;</td>
+   <td  onClick="speiseplan.rad_1285624800_1[0].checked = true" class="pointer" name="js_hidden">&nbsp;</td>
+   <td  onClick="speiseplan.rad_1285711200_1[0].checked = true" class="pointer" name="js_hidden">&nbsp;</td>
+   <td  onClick="speiseplan.rad_1285797600_1[0].checked = true" class="pointer" name="js_hidden"><input type="radio" name="rad_1285797600_1" value="del1"/> Menü entfernen</td>
+   <td  onClick="speiseplan.rad_1285884000_1[0].checked = true" class="pointer" name="js_hidden"><input type="radio" name="rad_1285884000_1" value="del1"/> Menü entfernen</td>
+   <td  onClick="speiseplan.rad_1285970400_1[0].checked = true" class="pointer" name="js_hidden"><input type="radio" name="rad_1285970400_1" value="del1"/> Menü entfernen</td>
+   <td  onClick="speiseplan.rad_1286056800_1[0].checked = true" class="pointer" name="js_hidden"><input type="radio" name="rad_1286056800_1" value="del1"/> Menü entfernen</td>
   </tr>
   <tr >
    <td  class="head" style="vertical-align:top; padding-right:2px"><span class="menue_bez">Menü 1</span></td>
-   <td  class=" auflistung1">Hokifilet (Fisch) mit Zitronensauce und Kartoffelpüree ,dazu Salatbeilage
+   <td  class=" auflistung1">Schweinesteak mit Champignions und Salzkartoffeln
 <hr />
 &nbsp;
 </td>
-   <td  class=" auflistung0"><br />Hausmacher Sülze mit Remouladensauce und Bratkartoffeln
+   <td  class=" auflistung0">Bayrischer Leberkäse an warmen Specksalat,dazu Rohkostsalat
 <hr />
 &nbsp;
 </td>
-   <td  class=" auflistung1">Schweinenackenbraten mit Erbsen und Salzkartoffeln
+   <td  class=" auflistung1">Gyrospfanne mit Tzatziki und Kräuterreis
 <hr />
 &nbsp;
 </td>
-   <td  class=" auflistung0">Jägerschnitzel mit Tomatensauce und Spirelli,dazu Rohkostsalat
+   <td  onClick="check('rad_1285797600_1', '1');" name="td_1285797600_1_1" class=" auflistung0 gruen pointer">Salamipizza, dazu gemischter Salat
 <hr />
-&nbsp;
+<input type="radio" name="rad_1285797600_1" value="1_1_1" class="bestellt" checked="checked" /><script type="text/javascript">document.write('<div class="input_overlay">&nbsp;</div>');</script>
 </td>
-   <td  class=" auflistung1 gruen">Soljanka mit Brot
+   <td  onClick="check('rad_1285884000_1', '1');" name="td_1285884000_1_1" class=" auflistung1 pointer">Rostbratwurst an buntem Nudelsalat
 <hr />
-<input type="hidden" name="fld_1284674400_1_1" value="1" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
-1x bestellt&nbsp;
+<input type="radio" name="rad_1285884000_1" value="1_1_1" class="splan_input" /><script type="text/javascript">document.write('<div class="input_overlay">&nbsp;</div>');</script>
 </td>
-   <td  class=" auflistung0">deftiger Linseneintopf mit Blutwurst
+   <td  onClick="check('rad_1285970400_1', '1');" name="td_1285970400_1_1" class=" auflistung0 pointer">
 <hr />
-&nbsp;
+<input type="hidden" name="fld_1285970400_1_1" value="0" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
 </td>
-   <td  class=" auflistung1">Gefüllter Putenrollbraten mit Pariser Möhren und Petersilienkartoffeln
+   <td  onClick="check('rad_1286056800_1', '1');" name="td_1286056800_1_1" class=" auflistung1 pointer">
 <hr />
-&nbsp;
+<input type="hidden" name="fld_1286056800_1_1" value="0" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
 </td>
   </tr>
   <tr >
    <td  class="head" style="vertical-align:top; padding-right:2px"><span class="menue_bez">Menü 2</span></td>
-   <td  class=" auflistung1">Schweinefleisch süß- sauer mit Asiagemüse an risotto
+   <td  class=" auflistung1">Gräupchen- Eintopf mit Rauchfleisch, dazu Brot
 <hr />
 &nbsp;
 </td>
-   <td  class=" auflistung0 gruen">Putensteak mit Bluhmenkohl und Petersilienkartoffeln
-<hr />
-<input type="hidden" name="fld_1284415200_1_2" value="1" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
-1x bestellt&nbsp;
-</td>
-   <td  class=" auflistung1 gruen">Knusperschnitzel mit Bohnengemüse und Salzkartoffeln
-<hr />
-<input type="hidden" name="fld_1284501600_1_2" value="1" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
-1x bestellt&nbsp;
-</td>
-   <td  class=" auflistung0">Gebratene Leber mit Zwiebelsauce, dazu Kartoffelpüree
+   <td  class=" auflistung0">Seelachsfilet in Pikanter Tomaten-  Kokostunke an Risotto,dazu Rohkostsalat
 <hr />
 &nbsp;
 </td>
-   <td  class=" auflistung1">
+   <td  class=" auflistung1">Hackbraten ´Hausfrauen- Art´ dazu Mischgemüse und Salzkartoffeln
 <hr />
 &nbsp;
 </td>
-   <td  class=" auflistung0">
+   <td  onClick="check('rad_1285797600_1', '2');" name="td_1285797600_1_2" class=" auflistung0 pointer">Hähnchenschenkel mit Buttererbsen und Petersilienkartoffeln
 <hr />
-&nbsp;
+<input type="radio" name="rad_1285797600_1" value="1_1_2" class="splan_input" /><script type="text/javascript">document.write('<div class="input_overlay">&nbsp;</div>');</script>
 </td>
-   <td  class=" auflistung1">
+   <td  onClick="check('rad_1285884000_1', '2');" name="td_1285884000_1_2" class=" auflistung1 pointer">
 <hr />
-&nbsp;
+<input type="hidden" name="fld_1285884000_1_2" value="0" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
+</td>
+   <td  onClick="check('rad_1285970400_1', '1');" name="td_1285970400_1_1" class=" auflistung0 pointer">
+<hr />
+<input type="hidden" name="fld_1285970400_1_2" value="0" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
+</td>
+   <td  onClick="check('rad_1286056800_1', '1');" name="td_1286056800_1_1" class=" auflistung1 pointer">
+<hr />
+<input type="hidden" name="fld_1286056800_1_2" value="0" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
 </td>
   </tr>
   <tr >
    <td  class="head" style="vertical-align:top; padding-right:2px"><span class="menue_bez">Vegetarisch</span></td>
-   <td  class=" auflistung1 gruen">Rührei mit Rahmspinat und Salzkartoffeln
+   <td  class=" auflistung1 gruen">Gemüsetaler mit Kräutersauce und Kartoffelpüree
 <hr />
-<input type="hidden" name="fld_1284328800_1_3" value="1" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
+<input type="hidden" name="fld_1285538400_1_3" value="1" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
 1x bestellt&nbsp;
 </td>
-   <td  class=" auflistung0">Wok- gemüse mit Kräutersauce und Reis
+   <td  class=" auflistung0 gruen">Tortellini mit Käsesauce, dazu Rohkostsalat
 <hr />
-&nbsp;
-</td>
-   <td  class=" auflistung1">Grießbrei mit Fruchtsauce
-<hr />
-&nbsp;
-</td>
-   <td  class=" auflistung0 gruen">Kartoffelauflauf,dazu Salatbeilage
-<hr />
-<input type="hidden" name="fld_1284588000_1_3" value="1" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
+<input type="hidden" name="fld_1285624800_1_3" value="1" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
 1x bestellt&nbsp;
 </td>
-   <td  class=" auflistung1">Frühlingsrolle mit pikanter sauce
+   <td  class=" auflistung1 gruen">Bluhmenkohl- Käse- Meddallion mit sauce Hollandaise und Salzkartoffeln
 <hr />
-&nbsp;
+<input type="hidden" name="fld_1285711200_1_3" value="1" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
+1x bestellt&nbsp;
 </td>
-   <td  class=" auflistung0">Milchreis mit Kirschsauce
+   <td  onClick="check('rad_1285797600_1', '3');" name="td_1285797600_1_3" class=" auflistung0 pointer">Rahmchampignions an Spirelli, dazu gemischter Salat
 <hr />
-&nbsp;
+<input type="radio" name="rad_1285797600_1" value="1_1_3" class="splan_input" /><script type="text/javascript">document.write('<div class="input_overlay">&nbsp;</div>');</script>
 </td>
-   <td  class=" auflistung1">Gemüseschnitzel mit Kräutersauce und Petersilienkartoffeln
+   <td  onClick="check('rad_1285884000_1', '2');" name="td_1285884000_1_2" class=" auflistung1 pointer">gefüllte Germknödel mit Vanillesauce
 <hr />
-&nbsp;
+<input type="radio" name="rad_1285884000_1" value="1_1_3" class="splan_input" /><script type="text/javascript">document.write('<div class="input_overlay">&nbsp;</div>');</script>
+</td>
+   <td  onClick="check('rad_1285970400_1', '1');" name="td_1285970400_1_1" class=" auflistung0 pointer">
+<hr />
+<input type="hidden" name="fld_1285970400_1_3" value="0" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
+</td>
+   <td  onClick="check('rad_1286056800_1', '1');" name="td_1286056800_1_1" class=" auflistung1 pointer">
+<hr />
+<input type="hidden" name="fld_1286056800_1_3" value="0" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
 </td>
   </tr>
   <tr >
    <td  class="head" style="vertical-align:top; padding-right:2px"><span class="menue_bez">Dessert</span></td>
-   <td  class=" auflistung1">Cremespeise
+   <td  class=" auflistung1">Dessert des Tages
 <hr />
 &nbsp;
 </td>
-   <td  class=" auflistung0">frisches Obst
+   <td  class=" auflistung0">Dessert des Tages
 <hr />
 &nbsp;
 </td>
-   <td  class=" auflistung1 gruen">Apfelmus
-<hr />
-<input type="hidden" name="fld_1284501600_1_4" value="1" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
-1x bestellt&nbsp;
-</td>
-   <td  class=" auflistung0">Kompott
+   <td  class=" auflistung1">Dessert des Tages
 <hr />
 &nbsp;
 </td>
-   <td  class=" auflistung1">Joghurt
+   <td  onClick="check('fld_1285797600_1_4', 1)" class=" auflistung0 pointer">Dessert des Tages
 <hr />
-&nbsp;
+<input type="hidden" name="fld_1285797600_1_4" value="0" class="splan_input" /><input type="checkbox" name="fld_1285797600_1_4" value="1" class="splan_input"  /><script type="text/javascript">document.write('<div class="input_overlay">&nbsp;</div>');</script>
 </td>
-   <td  class=" auflistung0">frisches Obst
+   <td  onClick="check('fld_1285884000_1_4', 1)" class=" auflistung1 pointer">Dessert des Tages
 <hr />
-&nbsp;
+<input type="hidden" name="fld_1285884000_1_4" value="0" class="splan_input" /><input type="checkbox" name="fld_1285884000_1_4" value="1" class="splan_input"  /><script type="text/javascript">document.write('<div class="input_overlay">&nbsp;</div>');</script>
 </td>
-   <td  class=" auflistung1">Kompott
+   <td  onClick="check('fld_1285970400_1_4', 1)" class=" auflistung0 pointer">
 <hr />
-&nbsp;
+<input type="hidden" name="fld_1285970400_1_4" value="0" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
+</td>
+   <td  onClick="check('fld_1286056800_1_4', 1)" class=" auflistung1 pointer">
+<hr />
+<input type="hidden" name="fld_1286056800_1_4" value="0" class="splan_input" style="width:20px; font-size:11px; padding-left:0px; padding-right:0px" maxlength="3" />
 </td>
   </tr>
  </table>
  <!-- Ende Tabelle -->
 
+  <div style="text-align:right"><input type="reset" /><input type="submit" value="Weiter" style="font-weight:bold; width:100px" /></div>
   </form>
  
  
